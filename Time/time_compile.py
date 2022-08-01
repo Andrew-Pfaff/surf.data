@@ -1,8 +1,22 @@
 import Time.timedate_scripts as tds
 
 def timedate_list():
-    time_date_list = []
-
-
+    td_list = []
     
-    return time_date_list
+    #0
+    #date in YYYYMMDD form
+    day = tds.getdate()
+    td_list.append(day)
+
+    #1
+    #start time in HH:MM form (24 hours, requires a 0 for single digit numbers, i.e. 08)
+    stime = tds.start_time()
+    td_list.append(stime)
+
+    #2
+    #end time in HH:MM form (24 hours, requires a 0 for single digit numbers, i.e. 08)
+    etime = tds.end_time()
+    td_list.append(etime)
+    
+    
+    return td_list
