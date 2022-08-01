@@ -43,35 +43,27 @@ new_csv_row.append(day_time[2])
 
 #run tide script
 tide_list = td.tide(day_time)
-init_tide = tide_list[0]
-final_tide = tide_list[1]
-
 
 #3. init_tide
-new_csv_row.append(init_tide)
+new_csv_row.append(tide_list[0])
 #4. final_tide
-new_csv_row.append(final_tide)
+new_csv_row.append(tide_list[1])
 
 
 
-#winds
+#run wind script
 wind_list = wind.wind(day_time)
 
 #5. start_wind_speed
 new_csv_row.append(wind_list[0])
-
 #6. end_wind_speed
 new_csv_row.append(wind_list[1])
-
 #7. average_wind_speed
 new_csv_row.append(wind_list[2])
-
 #8. start_wind_direction
 new_csv_row.append(wind_list[3])
-
 #9. end_wind_direction
 new_csv_row.append(wind_list[4])
-
 #10. mode_wind_direction
 new_csv_row.append(wind_list[5])
 
