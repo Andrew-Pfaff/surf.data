@@ -1,5 +1,10 @@
 import Time.timedate_scripts as tds
 
+
+#Compile a list with all of the formats that will be needed by other commands.
+#This way we can call to this list in any scripts that require a time or date
+
+
 def timedate_list():
     td_list = []
     
@@ -18,5 +23,5 @@ def timedate_list():
     etime = tds.end_time()
     td_list.append(etime)
     
-    
+        
     return td_list
