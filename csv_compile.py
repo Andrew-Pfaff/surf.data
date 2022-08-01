@@ -1,6 +1,6 @@
-import time_compile as tc
-import surf_survey as ss
-import tidedata as td
+import Time.time_compile as tc
+import Surf_Data.surf_survey as ss
+import Surf_Data.tidedata as td
 
 
 #CSV order
