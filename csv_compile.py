@@ -49,9 +49,13 @@ new_csv_row.append(init_tide)
 new_csv_row.append(final_tide)
 
 
-import csv
 
+
+
+#add to the csv
+import csv
 with open("sands.csv", "a", newline='') as fp:
     wr = csv.writer(fp)
     wr.writerow(new_csv_row)
-    
+
+print('Session added to sands.csv.')
