@@ -3,6 +3,7 @@ from csv import writer
 import Time.time_compile as tc
 import Surf_Data.surf_survey as ss
 import Surf_Data.tidedata as td
+import Surf_Data.wind as wind
 
 
 #--CSV order key--
@@ -11,10 +12,13 @@ import Surf_Data.tidedata as td
 #2. end_time
 #3. init_tide
 #4. final_tide
-#5. 
-#
-#
-#last will be the survey
+#5. start_wind_speed
+#6. end_wind_speed
+#7. average_wind_speed
+#8. start_wind_direction
+#9. end_wind_direction
+#10. mode_wind_direction
+
 
 
 #get inputs
@@ -50,6 +54,26 @@ new_csv_row.append(final_tide)
 
 
 
+#winds
+wind_list = wind.wind(day_time)
+
+#5. start_wind_speed
+new_csv_row.append(wind_list[0])
+
+#6. end_wind_speed
+new_csv_row.append(wind_list[1])
+
+#7. average_wind_speed
+new_csv_row.append(wind_list[2])
+
+#8. start_wind_direction
+new_csv_row.append(wind_list[3])
+
+#9. end_wind_direction
+new_csv_row.append(wind_list[4])
+
+#10. mode_wind_direction
+new_csv_row.append(wind_list[5])
 
 
 #add to the csv

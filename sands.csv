@@ -1,1 +1,1 @@
-date,start_time,end_time,init_tide,final_tide
+date,start_time,end_time,init_tide,final_tide,start_wind_speed,end_wind_speed,average_wind_speed,start_wind_direction,end_wind_direction,mode_wind_direction
