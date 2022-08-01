@@ -33,3 +33,8 @@ def end_time():
     etimein = input('End Time: ')
     etime = etimein
     return etime
+
+#date in YYYY-MM-DD form
+def date_dash(date1):
+    dashes = date1[:3],'-',date1[4:5],'-',date1[6:]
+    return dashes

@@ -22,6 +22,11 @@ def timedate_list():
     #end time in HH:MM form (24 hours, requires a 0 for single digit numbers, i.e. 08)
     etime = tds.end_time()
     td_list.append(etime)
-    
-        
+
+    #3 
+    #date in YYYY-MM-DD form
+    dashed_date = tds.date_dash(day)
+    td_list.append(dashed_date)
+
+
     return td_list
