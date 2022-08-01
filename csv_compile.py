@@ -51,6 +51,7 @@ new_csv_row.append(final_tide)
 
 import csv
 
-with open("sands.csv", "a") as fp:
+with open("sands.csv", "a", newline='') as fp:
     wr = csv.writer(fp)
     wr.writerow(new_csv_row)
+    
