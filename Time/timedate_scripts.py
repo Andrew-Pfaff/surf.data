@@ -1,4 +1,6 @@
 from datetime import datetime
+from pkgutil import get_data
+import join
 
 #date
 #form YYYYMMDD
@@ -36,5 +38,5 @@ def end_time():
 
 #date in YYYY-MM-DD form
 def date_dash(date1):
-    dashes = date1[:3],'-',date1[4:5],'-',date1[6:]
+    dashes = date1[:4]+'-'+date1[4:6]+'-'+date1[6:]
     return dashes

@@ -18,11 +18,6 @@ def wind(day_time):
 	end_time = day_time[2]
 	date = day_time[3]
 
-
-
-
-
-
 	#format date and time user input into datetime format
 	user_start_datetime = datetime.strptime(date + " " + start_time, '%Y-%m-%d %H:%M')
 	user_end_datetime = datetime.strptime(date + " " + end_time, '%Y-%m-%d %H:%M')
@@ -78,6 +73,7 @@ def wind(day_time):
 
 
 	average_wind_speed = winddata_during_sesh["WSPD"].mean()
+	average_wind_speed = round(average_wind_speed, 2)
 
 	start_wind_direction = winddata_during_sesh['WDIR'].iat[0]
 	end_wind_direction = winddata_during_sesh['WDIR'].iat[-1]
@@ -89,6 +85,7 @@ def wind(day_time):
 	average_wind_past_48 = winddata.loc[(winddata["date time"].dt.date).between(two_days_ago, user_date)]
 
 	average_wind_speed_past_48 = average_wind_past_48["WSPD"].mean()
+	average_wind_speed_past_48 = round(average_wind_speed_past_48, 2)
 	mode_wind_direction_past_48 = average_wind_past_48['WDIR'].value_counts().idxmax()
 
 

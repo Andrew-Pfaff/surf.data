@@ -1,1 +1,2 @@
 date,start_time,end_time,init_tide,final_tide,start_wind_speed,end_wind_speed,average_wind_speed,start_wind_direction,end_wind_direction,mode_wind_direction
+20220801,10:00,11:00,2.211,3.113,4.6,3.6,4.15,220,220,220
