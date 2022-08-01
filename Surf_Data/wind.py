@@ -2,8 +2,7 @@ import pandas
 import requests
 import wget
 import urllib.request
-import datetime
-from datetime import date
+from datetime import *
 
 #dataset is 6 hours ahead
 #data is taking every 6 minutes(thus data points are rounded to 6 multiples)
@@ -15,9 +14,9 @@ def wind(day_time):
 	#date = "2022-07-31" #REPLACE THIS WITH INPUT FROM OTHER FILE
 	
 	#retreives user data from seperate file (start time end time of sesh)
-	start_time = day_time[0]
-	end_time = day_time[1]
-	date = day_time[2]
+	start_time = day_time[1]
+	end_time = day_time[2]
+	date = day_time[3]
 
 
 
