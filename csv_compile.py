@@ -1,4 +1,3 @@
-from mimetypes import init
 import Time.time_compile as tc
 import Surf_Data.surf_survey as ss
 import Surf_Data.tidedata as td
@@ -47,3 +46,5 @@ new_csv_row.append(init_tide)
 #4. final_tide
 new_csv_row.append(final_tide)
 
+
+print(new_csv_row)
