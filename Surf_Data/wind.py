@@ -94,6 +94,6 @@ def wind(day_time):
 
 
 	winds = []
-	winds.extend(start_wind_speed, end_wind_speed, average_wind_speed, start_wind_direction, end_wind_direction, mode_wind_direction, average_wind_speed_past_48, mode_wind_direction_past_48)
+	winds.extend((start_wind_speed, end_wind_speed, average_wind_speed, start_wind_direction, end_wind_direction, mode_wind_direction, average_wind_speed_past_48, mode_wind_direction_past_48))
 
 	return winds
