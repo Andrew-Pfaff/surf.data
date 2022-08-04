@@ -1,22 +1,16 @@
-import pandas
+import pandas as pd
 import requests
+import wget
 
-#-SWELL-
 
-swell_url = 'https://www.ndbc.noaa.gov/station_page.php?station=46053'
+station = '46053'
+url = 'https://www.ndbc.noaa.gov/data/realtime2/'+station+'.txt'
 
-#request page
-swell_page = requests.get(swell_url)
-wow = pandas.read_html(swell_page.text)
 
-print(wow[11])
+#text file
+# data_txt = wget.download(url)
 
-# soup = BeautifulSoup(swell_page.content, 'html.parser')
-# page_body = soup.body
-# print(page_body)
+#csv file
+data_csv = pd.read_csv(url, delim_whitespace=True)
 
-# data = []
-# table = soup.find('table', attrs={'class':'lineItemsTable'})
-# table_body = table.find('tbody')
-
-# rows = table_body.find_all('tr')  
+print(data_csv)

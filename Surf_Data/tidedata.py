@@ -3,7 +3,6 @@ from xml.etree import ElementTree
 import xmltodict
 import json
 
-#-TIDE-
 def tide(day_time):
     #day_time should be a list with different formats to the date and the start/end times for more information on this see that file
     
