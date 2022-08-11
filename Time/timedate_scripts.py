@@ -40,3 +40,7 @@ def end_time():
 def date_dash(date1):
     dashes = date1[:4]+'-'+date1[4:6]+'-'+date1[6:]
     return dashes
+
+def utc_convert(time):
+    datetime.utcnow()
+    
