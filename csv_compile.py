@@ -5,20 +5,18 @@ import Surf_Data.surf_survey as ss
 import Surf_Data.tidedata as td
 import Surf_Data.wind as wind
 
-
 #--CSV order key--
-#0. date
-#1. start_time
-#2. end_time
-#3. init_tide
-#4. final_tide
-#5. start_wind_speed
-#6. end_wind_speed
-#7. average_wind_speed
-#8. start_wind_direction
-#9. end_wind_direction
-#10. mode_wind_direction
-
+    #0. date
+    #1. start_time
+    #2. end_time
+    #3. init_tide
+    #4. final_tide
+    #5. start_wind_speed
+    #6. end_wind_speed
+    #7. average_wind_speed
+    #8. start_wind_direction
+    #9. end_wind_direction
+    #10. mode_wind_direction
 
 
 #get inputs
