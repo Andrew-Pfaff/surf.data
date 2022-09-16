@@ -3,6 +3,13 @@ import requests
 import wget
 import urllib.request
 from datetime import *
+from api2 import *
+import sessiontime as st
+
+#-TIDE-
+
+#correct url for the date and time
+
 
 #dataset is 6 hours ahead
 #data is taking every 6 minutes(thus data points are rounded to 6 multiples)
@@ -14,9 +21,14 @@ def wind(day_time):
 	#date = "2022-07-31" #REPLACE THIS WITH INPUT FROM OTHER FILE
 	
 	#retreives user data from seperate file (start time end time of sesh)
-	start_time = day_time[1]
-	end_time = day_time[2]
-	date = day_time[3]
+	start_time = st.start_time()
+	end_time = st.end_time()
+	date = st.getdate()
+
+
+
+
+
 
 	#format date and time user input into datetime format
 	user_start_datetime = datetime.strptime(date + " " + start_time, '%Y-%m-%d %H:%M')
@@ -50,7 +62,7 @@ def wind(day_time):
 	winddata['date time'] =  pandas.to_datetime(winddata["#YY"] + "/" + winddata["MM"] + "/" + winddata["DD"] + " " + winddata["hh"] + ":" + winddata["mm"])
 
 	#change times to pacifc standard time
-	winddata['date time'] = winddata['date time']-timedelta(hours=6)
+	winddata['date time'] = winddata['date time']-timedelta(hours=7)
 
 
 	#drop previous time collums besides the single date and time collum
@@ -90,7 +102,7 @@ def wind(day_time):
 
 
 
-	winds = []
-	winds.extend((start_wind_speed, end_wind_speed, average_wind_speed, start_wind_direction, end_wind_direction, mode_wind_direction, average_wind_speed_past_48, mode_wind_direction_past_48))
+	windstats = []
+	windstats.extend((start_wind_speed, end_wind_speed, average_wind_speed, start_wind_direction, end_wind_direction, mode_wind_direction, average_wind_speed_past_48, mode_wind_direction_past_48, land_average_wind_speed, land_start_wind_direction, land_end_wind_direction, land_mode_wind_direction))
 
-	return winds
+	return windstats
