@@ -7,7 +7,6 @@ import wget
 import urllib.request
 
 import sessiontime as st
-
 #-TIDE-
 
 #correct url for the date and time

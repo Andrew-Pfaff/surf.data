@@ -28,5 +28,9 @@ def timedate_list():
     dashed_date = tds.date_dash(day)
     td_list.append(dashed_date)
 
-
+    #4
+    #current sb time to utc in HH:MM
+    
+    
+    
     return td_list
