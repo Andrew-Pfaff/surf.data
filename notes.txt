@@ -1,0 +1,21 @@
+Time and Date Information Scripts:
+    There are two programs. 
+    One (timedate_scripts.py) has all of the programs that put the inputted (beggining and end) dates/times into any format that will be used by a program.
+    The second (time_compile.py) compiles all of these formats into a list that will be created in the csv compiler and called to for use via all of the surf data collecting programs.
+
+
+Data Grabbing Scripts:
+    Tide 
+    Wind 
+    Swell 
+    Survey
+
+
+Main Scripts:
+    csv_compile.py
+        This program starts by running the time_compile script which outputs a list of times and dates that will be called to later in the script.
+        There is a key for these formats at the top of the time_compile.py script that lists each format with its list index.
+        These list elements are then called as inputs to the data collecting scripts.
+        Each of these data collecting scripts is then run and put into a list.
+        The order for this list has a key at the top of the csv_compile.py script. 
+        This list will be put into a csv row at the end of the data collecting.

@@ -13,8 +13,6 @@ import sessiontime as st
 
 
 
-
-
 testoufile = {
  "queryCost": 25,
  "latitude": 34.4357,
