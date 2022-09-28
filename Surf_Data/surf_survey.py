@@ -13,8 +13,23 @@ def surf_survey():
     quality = input('Rate the overall quality of the surf. Input an integer value between 1 and 5, 1 being bad, 5 being good: ')
     survey_list.append(quality)
 
+    power = input('')
+    survey_list.append(power)
 
+    avg_size = input('')
+    survey_list.append(avg_size)
 
+    max_size = input('')
+    survey_list.append(max_size)    
+
+    chop = input('')
+    survey_list.append(chop)    
+
+    closeout = input('')
+    survey_list.append(closeout)
+
+    steep = input('')
+    survey_list.append(steep)
 
 
 
