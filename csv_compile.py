@@ -6,22 +6,30 @@ import Surf_Data.tidedata as td
 import Surf_Data.wind as wind
 
 #--CSV order key--
-    #0. date
-    #1. start_time
-    #2. end_time
-    #3. init_tide
-    #4. final_tide
-    #5. start_wind_speed
-    #6. end_wind_speed
-    #7. average_wind_speed
-    #8. start_wind_direction
-    #9. end_wind_direction
-    #10. mode_wind_direction
+    #0.   date
+    #1.   start_time
+    #2.   end_time
+    #3.   init_tide
+    #4.   final_tide
+    #5.   start_wind_speed
+    #6.   end_wind_speed
+    #7.   average_wind_speed
+    #8.   start_wind_direction
+    #9.   end_wind_direction
+    #10.  mode_wind_direction
+    # overall quality (1-5 rating)
+    # power (1-5 rating)
+    # avg size (approx ft)
+    # max size (approx ft)
+    # choppyness (1-5 rating)
+    # rate of closeouts (1-5 rating)
+    # steepness (1-5 rating [1 close to 90 degrees 5 closer to 45])
 
 
-#get inputs
+
+#get time for inputs
 day_time = tc.timedate_list()
-survey_results = ss.surf_survey()
+
 
 
 #create a new entry to the csv file
@@ -64,6 +72,11 @@ new_csv_row.append(wind_list[3])
 new_csv_row.append(wind_list[4])
 #10. mode_wind_direction
 new_csv_row.append(wind_list[5])
+
+
+#survey
+survey_results = ss.surf_survey()
+
 
 
 #add to the csv
