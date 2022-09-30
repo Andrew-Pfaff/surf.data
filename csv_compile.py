@@ -76,6 +76,24 @@ new_csv_row.append(wind_list[5])
 
 #survey
 survey_results = ss.surf_survey()
+# - overall quality (1-5 rating)
+new_csv_row.append(survey_results[0])
+# - power (1-5 rating)
+new_csv_row.append(survey_results[1])
+# - avg size (approx ft)
+new_csv_row.append(survey_results[2])
+# - max size (approx ft)
+new_csv_row.append(survey_results[3])
+# - choppyness (1-5 rating)
+new_csv_row.append(survey_results[4])
+# - rate of closeouts (1-5 rating)
+new_csv_row.append(survey_results[5])
+# - steepness (1-5 rating [1 close to 90 degrees 5 closer to 45])
+new_csv_row.append(survey_results[6])
+
+
+
+
 
 
 
